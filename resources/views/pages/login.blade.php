@@ -148,19 +148,17 @@
                 body: JSON.stringify(formData)
             });
 
-            let data = await response.json();
+            const data = await response.json();
 
             if (response.ok) {
-                // Simpan token di localStorage
+                // Simpan token untuk API
                 localStorage.setItem('auth_token', data.access_token);
                 localStorage.setItem('user_role', data.user.role);
 
-                // Redirect ke dashboard
-                console.log('Login successful. Redirecting to dashboard...');
+                // Redirect ke halaman berbasis session
                 window.location.href = '/home';
             } else {
-                // Tampilkan error
-                alert(data.message || 'Login failed. Please try again.');
+                alert(data.message || 'Login gagal. Silakan coba lagi.');
             }
         });
     </script>

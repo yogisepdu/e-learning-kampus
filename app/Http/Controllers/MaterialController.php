@@ -18,7 +18,6 @@ class MaterialController extends Controller
         $description = 'Daftar Materi yang tersedia';
         $materi = Material::with('course')->get();
         // dd($materi);
-
         return view('material.index', compact('title', 'description', 'materi'));
     }
 

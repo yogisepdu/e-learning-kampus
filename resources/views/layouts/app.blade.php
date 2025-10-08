@@ -71,6 +71,7 @@
     @yield('scripts')
 
     <!-- [Page Specific JS] end -->
+    
     <!-- Required Js -->
     <script src="{{ asset('assets/js/plugins/popper.min.js') }}"></script>
     <script src="{{ asset('assets/js/plugins/simplebar.min.js') }}"></script>

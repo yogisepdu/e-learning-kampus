@@ -65,4 +65,31 @@
             </div>
             <!-- [ form-element ] end -->
         </div>
+
+        <script>
+            async function loadProfile() {
+                const token = localStorage.getItem('auth_token');
+                if (!token) {
+                    window.location.href = '/';
+                    return;
+                }
+
+                const res = await fetch('/api/profile', {
+                    headers: {
+                        'Authorization': `Bearer ${token}`,
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (res.ok) {
+                    const data = await res.json();
+                    document.getElementById('user-data').innerText = JSON.stringify(data.user, null, 2);
+                } else {
+                    alert('Failed to load profile. Redirecting to login.');
+                    window.location.href = '/';
+                }
+            }
+
+            loadProfile();
+        </script>
     @endsection

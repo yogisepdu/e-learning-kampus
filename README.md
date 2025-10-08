@@ -36,12 +36,6 @@ Fitur utama yang tersedia:
 -   Namun, paket `beyondcode/laravel-websockets` **belum kompatibel dengan Laravel 12**.
 -   Sehingga fitur **live chat** belum dapat diterapkan di proyek ini.
 
-### Email & Queue
-
--   Email notifikasi dikirim ke setiap mahasiswa ketika tugas baru dibuat.
--   Untuk testing, driver email menggunakan **log**.
--   Queue email sudah diimplementasikan untuk **performa pengiriman email**.
-
 ### Soft Delete
 
 -   Semua data penting (misal: courses, materials, assignments) menggunakan `softDeletes()`.

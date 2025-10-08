@@ -28,7 +28,7 @@ Fitur utama yang tersedia:
 -   Akibatnya:
     -   `@csrf` tidak tersedia di Blade, sehingga form yang dikirim dari Blade akan error.
     -   `Auth::user()` akan null pada request dari Blade.
--   **Solusi:** Semua request sebaiknya diuji menggunakan **Postman** atau **frontend SPA** yang menyertakan token Bearer.
+-   **Solusi:** Semua request diuji menggunakan **Postman** atau **frontend SPA** yang menyertakan token Bearer dan dalam hal ini saya membuat folder baru e-learning-api yang secara khusus untuk menangani endpoint yang diberikan.
 
 ### Laravel WebSockets
 
